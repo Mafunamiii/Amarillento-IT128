@@ -62,6 +62,7 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\Posts.sql" />
+    <Build Include="spUsers_Authenticate.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AmarillentoBlogDB.publish.xml" />

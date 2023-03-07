@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jahn\\source\\repos\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj": {}
+    "C:\\Users\\Jahn\\source\\repos\\Amarillento-IT128\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jahn\\source\\repos\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj": {
+    "C:\\Users\\Jahn\\source\\repos\\Amarillento-IT128\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jahn\\source\\repos\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Jahn\\source\\repos\\Amarillento-IT128\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj",
         "projectName": "BlogDataLibrary",
-        "projectPath": "C:\\Users\\Jahn\\source\\repos\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj",
+        "projectPath": "C:\\Users\\Jahn\\source\\repos\\Amarillento-IT128\\AmarillentoLE3\\BlogDataLibrary\\BlogDataLibrary.csproj",
         "packagesPath": "C:\\Users\\Jahn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jahn\\source\\repos\\AmarillentoLE3\\BlogDataLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Jahn\\source\\repos\\Amarillento-IT128\\AmarillentoLE3\\BlogDataLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
