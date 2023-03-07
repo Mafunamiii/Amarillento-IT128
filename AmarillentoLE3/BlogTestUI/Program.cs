@@ -10,7 +10,7 @@ class Program
     static void Main(string[] args)
     {
         SqlData db = GetConnection();
-
+       
         Authenticate(db);
 
         Console.WriteLine("Press Enter to exit...");
