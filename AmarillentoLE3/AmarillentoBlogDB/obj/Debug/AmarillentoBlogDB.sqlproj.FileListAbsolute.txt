@@ -14,3 +14,7 @@ C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\bi
 C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\AmarillentoBlogDB.sqlproj.AssemblyReference.cache
 C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\AmarillentoBlogDB.dll
 C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\AmarillentoBlogDB.pdb
+C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\Model.xml
+C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\refactor.xml
+C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\postdeploy.sql
+C:\Users\Jahn\source\repos\Amarillento-IT128\AmarillentoLE3\AmarillentoBlogDB\obj\Debug\predeploy.sql

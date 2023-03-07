@@ -63,7 +63,11 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\Posts.sql" />
-    <Build Include="Stored Procedures\Users_Authenticate.sql" />
+    <Build Include="Stored Procedures\spUsers_Authenticate.sql" />
+    <Build Include="Stored Procedures\spUsers_Register.sql" />
+    <Build Include="Stored Procedures\spPosts_Insert.sql" />
+    <Build Include="Stored Procedures\spPosts_List.sql" />
+    <Build Include="Stored Procedures\spPosts_Detail.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AmarillentoBlogDB.publish.xml" />
