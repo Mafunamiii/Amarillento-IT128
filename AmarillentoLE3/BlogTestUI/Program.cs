@@ -16,8 +16,7 @@ class Program
         do {
             
             SqlData db = GetConnection();
-            
-            
+
             try
             {
                 int tempMenuInputint = 0;
@@ -137,7 +136,7 @@ class Program
         Console.Write("Password: ");
         string password = Console.ReadLine();
 
-        UserModel user = db.Authenticate(username, password);
+        UserModel user = db.Authenticate(username, password);      
 
         return user;
     }
@@ -176,7 +175,15 @@ class Program
 
     private static void AddPost(SqlData db)
     {
+
         UserModel user = GetCurrentUser(db);
+
+        if (user == null)
+        {
+            Console.WriteLine("Invalid credentials.");
+            return;
+        }
+        
 
         Console.Write("Title: ");
         string title = Console.ReadLine();
@@ -202,7 +209,13 @@ class Program
         foreach (ListPostModel post in posts)
         {
             Console.WriteLine($"{post.Id}. Title: {post.Title} by {post.UserName} [{post.DateCreated.ToString("yyyy-MM-dd")}");
-            Console.WriteLine($"{post.Body.Substring(0, 20)}...\n");
+            if (post.Body.Length < 20)
+            {
+                Console.WriteLine($"{post.Body}\n");
+            } else { 
+                Console.WriteLine($"{post.Body[..20]}...\n"); 
+            }
+            
 
         }
     }
