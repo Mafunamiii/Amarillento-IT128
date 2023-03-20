@@ -49,5 +49,18 @@ namespace ItemAPI.Controllers
       return Ok(await _context.Items.ToListAsync());
 
     }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<List<Item>>> DeleteItem(int id)
+    {
+      var dbItem = await _context.Items.FindAsync(id);
+      if (dbItem == null)
+        return BadRequest("Item not found.");
+
+      _context.Items.Remove(dbItem);
+      await _context.SaveChangesAsync();
+
+      return Ok(await _context.Items.ToListAsync());
+    }
   }
 }

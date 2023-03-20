@@ -10,6 +10,7 @@ import { ItemService } from './services/item.service';
 export class AppComponent {
   title = 'Products.UI';
   items: item[] = [];
+  itemToEdit? : item;
 
   constructor (private ItemService: ItemService) {}
 
@@ -17,6 +18,18 @@ export class AppComponent {
     this.ItemService
     .getItems()
     .subscribe((result: item[]) => (this.items = result));
+  } 
+
+  UpdatedItemList(item: item[]) {
+    this.items = item;
+  }
+
+  initNewItem() {
+    this.itemToEdit = new item();
+  }
+
+  editItem(item: item) {
+    this.itemToEdit = item;
   }
 }
 

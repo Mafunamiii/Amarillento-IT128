@@ -1,0 +1,24 @@
+<div *ngIf="item">
+    <h2>{{ item.name }}</h2>
+    <div>   
+        Name:
+        <input [(ngModel)] = "item.name" placeholder="ItemName"/>
+    </div> 
+    <div>   
+        Code:
+        <input [(ngModel)] = "item.code" placeholder="Code"/>
+    </div> 
+    <div>   
+        Brand:
+        <input [(ngModel)] = "item.brand" placeholder="Brand"/>
+    </div> 
+    <div>   
+        Unit Price (#):
+        <input [(ngModel)] = "item.unitprice" placeholder="Unit Price"/>
+    </div> 
+
+    <button (click)="UpdateItem(item)" *ngIf="item.id"> Save </button>
+    <button (click)="DeleteItem(item)" *ngIf="item.id"> Delete </button>
+    <button (click)="CreateItem(item)" *ngIf="!item.id"> Create </button>
+
+</div>

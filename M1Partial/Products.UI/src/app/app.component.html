@@ -1,3 +1,5 @@
+<button (click)="initNewItem()"> Create New Item </button>
+
 <table>
   <thead>
     <th> DataBase ID </th>
@@ -13,7 +15,9 @@
       <td>{{ item.code}} </td>
       <td>{{ item.brand}} </td>
       <td>{{ item.unitprice}} </td>
-
+      <td><button (click)="editItem(item)">Edit</button></td>
     </tr>
   </tbody>
 </table>
+
+<app-edit-item [item]="itemToEdit" (itemsUpdated)="UpdatedItemList($event)"></app-edit-item>
