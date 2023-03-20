@@ -1,21 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 import { item } from '../models/item';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
+  private url = "item";
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-
-  public getItems() : item[] {
-    let testItem = new item();
-    testItem.id = 1;
-    testItem.name = "TestItem";
-    testItem.code = "00000001";
-    testItem.brand= "Original";
-    testItem.unitPrice= 100;
-
-    return [testItem];
+  public getItems() : Observable<item[]> {
+    return this.http.get<item[]>(`${environment.apiUrl}/${this.url}`);
   }
 }

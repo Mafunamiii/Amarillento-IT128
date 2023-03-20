@@ -14,8 +14,9 @@ export class AppComponent {
   constructor (private ItemService: ItemService) {}
 
   ngOnInit(): void {
-    this.items = this.ItemService.getItems();
-    console.log(this.items);
+    this.ItemService
+    .getItems()
+    .subscribe((result: item[]) => (this.items = result));
   }
 }
 

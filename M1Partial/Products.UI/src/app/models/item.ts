@@ -3,5 +3,5 @@ export class item {
     name = "";
     code = "";
     brand = "";
-    unitPrice? : number;
+    unitprice? : number;
 }
