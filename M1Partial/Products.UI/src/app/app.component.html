@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <th> DataBase ID </th>
+    <th> Name </th>
+    <th> Code </th>
+    <th> Brand </th>
+    <th> Unit Price </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{ item.id}}</td>
+      <td>{{ item.name}} </td>
+      <td>{{ item.code}} </td>
+      <td>{{ item.brand}} </td>
+      <td>{{ item.unitPrice}} </td>
+
+    </tr>
+  </tbody>
+</table>
