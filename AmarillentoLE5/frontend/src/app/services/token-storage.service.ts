@@ -22,7 +22,7 @@ export class TokenStorageService {
   }
 
   public saveUser(id : number): void {
-    let strId = id.toString();
+    let strId = (id ?? 0).toString();
     window.sessionStorage.removeItem(environment.userKey);
     window.sessionStorage.setItem(environment.userKey, strId);
   }

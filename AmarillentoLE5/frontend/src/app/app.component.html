@@ -1,20 +1,21 @@
-<html>
-    <nav>
-        <div class="logo">Blog DB</div>
-        <ul>
-            <li><a href="#">Home</a></li>
-
-        </ul>
-        <div class="login-buttons">
+<nav>
+    <div class="logo">Blog DB</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+    </ul>
+    <div class="login-buttons">
+         <ng-container *ngIf="isLoggedIn">
+            <p>Logged in as {{authService.currentUser.username}} </p>
+            <button class="login-button" (click)="authService.logout()">Logout</button>
+        </ng-container>
+        <ng-container *ngIf="!isLoggedIn">
             <button class="login-button" routerLink="/login">Login</button>
+        </ng-container>
+    </div>
+</nav>
 
-        </div>
-    </nav>      
-    <body>
-        <div class="container">
+<body>
+    <div class="container">
         <router-outlet></router-outlet>
-        </div>
-    </body>
-</html>
-
-        
+    </div>
+</body>

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { UserStatusService } from 'src/app/services/user-status.service';
 
 @Component({
   selector: 'app-login-page',
@@ -14,32 +15,45 @@ export class LoginPageComponent implements OnInit {
     username: null,
     password: null
   }
-
+  isLoggedIn = false;
+  loginSuccessMessage: string = 'Successfully logged in!';
   constructor(
     private authService: AuthService,
     private tokenStorage: TokenStorageService,
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private userStatusService: UserStatusService
   ) {}
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
-      this.authService.isLoggedIn = true;
-      this.router.navigate([this.authService.redirectUrl]);
+      this.isLoggedIn = true;
     }
   }
-
   onSubmit() {
     const {username, password} = this.form;
-
+    console.log('submitting')
     this.http.post<LoginPostData>("https://localhost:7248/api/Login/login", {username, password})
       .subscribe(
       data => {
         this.tokenStorage.saveToken(data.id_token);
         this.tokenStorage.saveUser(data.id);
-        this.router.navigate([this.authService.redirectUrl]);
-        window.location.reload();
-      })
+        this.isLoggedIn = true;
+        console.log('logged in')
+        this.userStatusService.setLoggedIn(true);
+        this.authService.currentUser = {
+          username : username
+        };
+        this.router.navigate(['/list-posts']);
+        //window.location.reload();
+        
+        console.log('submitted')
+      },
+      (error) => {
+        this.loginSuccessMessage = 'Login failed.';
+        console.error(error);
+      }
+      )
   }
   
 }
