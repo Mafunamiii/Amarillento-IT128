@@ -1,0 +1,7 @@
+<hr>
+<h4 id="postedBy">  {{ post?.firstName }} {{post?.lastName}} </h4>
+<h3 id="postTitle"><a href="/posts/{{post?.id}}"> {{ post?.title }}</a></h3>
+
+<p id="postBody">{{ post?.body}}</p>
+<hr>
+<p id="date">{{post?.dateCreated | date: 'h:mm a • MMM d, y ' }}</p>

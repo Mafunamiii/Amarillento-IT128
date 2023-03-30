@@ -1,0 +1,21 @@
+
+
+/* formatting */
+#date {
+    margin: 0px;
+}
+
+#postedBy {
+    margin-bottom: 0px; 
+}
+
+#postTitle {
+    margin-top: 0px;
+}
+
+#post {
+    background-color: #c1c7e0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}

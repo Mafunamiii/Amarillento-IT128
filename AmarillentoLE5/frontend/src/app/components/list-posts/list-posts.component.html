@@ -1,1 +1,5 @@
-<p>list-posts works!</p>
+<div id= "post" *ngFor="let post of posts">
+        <h4 id="postedBy"> Posted by {{ post.firstName }} {{ post.lastName }}</h4>
+        <p id="date"> {{ post.dateCreated | date: 'h:mm a • MMM d, y ' }}</p>
+        <h3 id="postTitle"> <a href="/posts/{{post.id}}">{{ post.title }}</a></h3>
+</div>

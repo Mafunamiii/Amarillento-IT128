@@ -1,0 +1,19 @@
+
+
+/* formatting */
+#date {
+    margin: 0px;
+}
+
+#postedBy {
+    margin: 0px; 
+}
+
+#postTitle {
+    margin: 5px 0px 4px 0px;
+}
+
+#postBody {
+    margin: 5px 5px 5px 5px;
+    font-size:large;
+}
